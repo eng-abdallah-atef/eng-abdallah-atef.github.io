@@ -652,6 +652,20 @@ main>section,header.hero,footer{overflow-x:clip}
 footer{position:relative;isolation:isolate;overflow:hidden}
 .foot-city{position:absolute;left:0;right:0;bottom:0;top:auto;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;opacity:.11;z-index:-1;pointer-events:none}
 footer{min-height:calc(100vw * 941 / 1672);display:flex;flex-direction:column;justify-content:flex-end}
+/* === Animated architectural pattern system (replaces project photo backgrounds) === */
+.arch-pat{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%)}
+.arch-pat::before,.arch-pat::after{content:"";position:absolute;inset:-480px;will-change:transform;background-repeat:repeat}
+.arch-pat::before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%23F5E8D6%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M0%200V480M0%200H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M24%200V480M0%2024H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M48%200V480M0%2048H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M72%200V480M0%2072H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M96%200V480M0%2096H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M120%200V480M0%20120H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M144%200V480M0%20144H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M168%200V480M0%20168H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M192%200V480M0%20192H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M216%200V480M0%20216H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M240%200V480M0%20240H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M264%200V480M0%20264H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M288%200V480M0%20288H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M312%200V480M0%20312H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M336%200V480M0%20336H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M360%200V480M0%20360H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M384%200V480M0%20384H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M408%200V480M0%20408H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M432%200V480M0%20432H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M456%200V480M0%20456H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M480%200V480M0%20480H480%22%20stroke-opacity%3D%220.9%22/%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%22120%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M94%20120H146M120%2094V146%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22360%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M334%20360H386M360%20334V386%22/%3E%3Cpath%20d%3D%22M144%20432H456M144%20424V440M456%20424V440M140%20436l8-8M452%20436l8-8%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M264%2096V168M264%20168A72%2072%200%200%201%20336%2096%22%20stroke-dasharray%3D%224%204%22/%3E%3Cpath%20d%3D%22M24%20312l40-40%22/%3E%3Cpath%20d%3D%22M34%20312l40-40%22/%3E%3Cpath%20d%3D%22M44%20312l40-40%22/%3E%3Cpath%20d%3D%22M54%20312l40-40%22/%3E%3Cpath%20d%3D%22M64%20312l40-40%22/%3E%3Cpath%20d%3D%22M74%20312l40-40%22/%3E%3Cpath%20d%3D%22M84%20312l40-40%22/%3E%3Cpath%20d%3D%22M94%20312l40-40%22/%3E%3Crect%20x%3D%2224%22%20y%3D%22264%22%20width%3D%22120%22%20height%3D%2248%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M300%20250l60-34%2060%2034-60%2034z%20M300%20250v60l60%2034%2060-34v-60%20M360%20284v60%22%20stroke-width%3D%221.1%22/%3E%3C/svg%3E");background-size:480px 480px;opacity:.065;animation:archA 90s linear infinite}
+.arch-pat::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%23ECD7BC%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M0%20480L480%200M240%20480L480%20240M0%20240L240%200%22%20stroke-dasharray%3D%222%2010%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2290%22%20stroke-dasharray%3D%221%206%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2254%22/%3E%3Cpath%20d%3D%22M60%20380h160v-120h-60v60h-100z%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M40%2060h120M40%2052v16M160%2052v16%22%20/%3E%3Cpath%20d%3D%22M300%20400c40-60%20100-60%20140%200%22%20/%3E%3C/svg%3E");background-size:960px 960px;opacity:.05;animation:archB 140s linear infinite}
+.alt .arch-pat::before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%230E2038%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M0%200V480M0%200H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M24%200V480M0%2024H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M48%200V480M0%2048H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M72%200V480M0%2072H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M96%200V480M0%2096H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M120%200V480M0%20120H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M144%200V480M0%20144H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M168%200V480M0%20168H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M192%200V480M0%20192H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M216%200V480M0%20216H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M240%200V480M0%20240H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M264%200V480M0%20264H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M288%200V480M0%20288H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M312%200V480M0%20312H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M336%200V480M0%20336H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M360%200V480M0%20360H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M384%200V480M0%20384H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M408%200V480M0%20408H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M432%200V480M0%20432H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M456%200V480M0%20456H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M480%200V480M0%20480H480%22%20stroke-opacity%3D%220.9%22/%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%22120%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M94%20120H146M120%2094V146%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22360%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M334%20360H386M360%20334V386%22/%3E%3Cpath%20d%3D%22M144%20432H456M144%20424V440M456%20424V440M140%20436l8-8M452%20436l8-8%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M264%2096V168M264%20168A72%2072%200%200%201%20336%2096%22%20stroke-dasharray%3D%224%204%22/%3E%3Cpath%20d%3D%22M24%20312l40-40%22/%3E%3Cpath%20d%3D%22M34%20312l40-40%22/%3E%3Cpath%20d%3D%22M44%20312l40-40%22/%3E%3Cpath%20d%3D%22M54%20312l40-40%22/%3E%3Cpath%20d%3D%22M64%20312l40-40%22/%3E%3Cpath%20d%3D%22M74%20312l40-40%22/%3E%3Cpath%20d%3D%22M84%20312l40-40%22/%3E%3Cpath%20d%3D%22M94%20312l40-40%22/%3E%3Crect%20x%3D%2224%22%20y%3D%22264%22%20width%3D%22120%22%20height%3D%2248%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M300%20250l60-34%2060%2034-60%2034z%20M300%20250v60l60%2034%2060-34v-60%20M360%20284v60%22%20stroke-width%3D%221.1%22/%3E%3C/svg%3E");opacity:.07}
+.alt .arch-pat::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%230B1A2E%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M0%20480L480%200M240%20480L480%20240M0%20240L240%200%22%20stroke-dasharray%3D%222%2010%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2290%22%20stroke-dasharray%3D%221%206%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2254%22/%3E%3Cpath%20d%3D%22M60%20380h160v-120h-60v60h-100z%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M40%2060h120M40%2052v16M160%2052v16%22%20/%3E%3Cpath%20d%3D%22M300%20400c40-60%20100-60%20140%200%22%20/%3E%3C/svg%3E");opacity:.055}
+@keyframes archA{from{transform:translate3d(0,0,0)}to{transform:translate3d(-480px,-480px,0)}}
+@keyframes archB{from{transform:translate3d(-480px,0,0) rotate(0)}to{transform:translate3d(0,-480px,0)}}
+.arch-pat .px{position:absolute;inset:0;transform:translate3d(0,var(--py,0px),0);transition:transform .2s linear}
+main>section>.wrap,main>section>*:not(.arch-pat){position:relative;z-index:1}
+@media (max-width:760px){.arch-pat::before{background-size:360px 360px;animation-duration:120s}.arch-pat::after{display:none}}
+@media (prefers-reduced-motion:reduce){.arch-pat::before,.arch-pat::after{animation:none}}
 /* iOS / Safari fallbacks */
 body{overflow-x:hidden}
 .hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
@@ -875,7 +889,7 @@ em,.hero blockquote{font-style:normal!important}
 </header>
 
 <main>
-<section id="about">
+<section id="about"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Profile</span><span class="ar">نبذة مهنية</span></p><h2><span class="en">Built on site, <em>controlled on paper</em></span><span class="ar">تنفيذ في الموقع، <em>وضبط على الورق</em></span></h2></div>
@@ -903,7 +917,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="experience" class="alt"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Career</span><span class="ar">المسيرة المهنية</span></p><h2><span class="en">Experience <em>timeline</em></span><span class="ar">الخط الزمني <em>للخبرات</em></span></h2></div>
@@ -987,7 +1001,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="projects"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Projects <em>portfolio</em></span><span class="ar">سجل <em>المشاريع</em></span></h2></div>
@@ -1005,7 +1019,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="gallery" class="alt">
+<section id="gallery" class="alt"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">From drawings to reality</span><span class="ar">من المخطط إلى الواقع</span></p><h2><span class="en">On site, <em>stage by stage</em></span><span class="ar">من الموقع، <em>مرحلة بمرحلة</em></span></h2></div>
@@ -1023,7 +1037,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_slab-1600.webp" srcset="img/st_slab-800.webp 800w, img/st_slab-1600.webp 1600w, img/st_slab.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="services"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">What I deliver</span><span class="ar">ما أقدّمه</span></p><h2><span class="en">Services</span><span class="ar">الخدمات</span></h2></div>
@@ -1052,7 +1066,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="skills" class="alt"><div class="sec-bg lt" aria-hidden="true"></div>
+<section id="skills" class="alt"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Software</span><span class="ar">البرامج</span></p><h2><span class="en">Technical <em>skills</em></span><span class="ar">المهارات <em>التقنية</em></span></h2></div>
@@ -1075,7 +1089,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="documentation"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Engineering workflow</span><span class="ar">سير العمل الهندسي</span></p><h2><span class="en">Documentation, <em>start to close-out</em></span><span class="ar">التوثيق، <em>من البداية حتى الإغلاق</em></span></h2></div>
@@ -1100,7 +1114,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="education" class="alt"><div class="sec-bg lt" aria-hidden="true"></div>
+<section id="education" class="alt"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Credentials</span><span class="ar">المؤهلات</span></p><h2><span class="en">Education &amp; <em>certifications</em></span><span class="ar">التعليم <em>والشهادات</em></span></h2></div>
@@ -1121,7 +1135,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="cv">
+<section id="cv"><div class="arch-pat" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Curriculum vitae</span><span class="ar">السيرة الذاتية</span></p><h2><span class="en">CV, <em>ready to share</em></span><span class="ar">السيرة الذاتية، <em>جاهزة للمشاركة</em></span></h2></div>
@@ -1150,7 +1164,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="contact" class="contact"><div class="arch-pat" aria-hidden="true"></div>
   
   <div class="wrap c-grid">
     <div>
