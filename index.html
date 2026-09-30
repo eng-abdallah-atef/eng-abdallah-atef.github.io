@@ -637,11 +637,11 @@ main>section,header.hero,footer{overflow-x:clip}
 @media (max-width:860px){.sketch{background-size:220% auto;background-position:center top}.hero-bg .hero-photo{width:100%!important;opacity:.22!important}}
 /* individual architectural sketch elements (client artwork, 4x upscaled) */
 .els{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.el{position:absolute;opacity:.2;width:clamp(260px,30vw,520px);height:auto}
+.el{position:absolute;opacity:.1;width:clamp(260px,30vw,520px);height:auto}
 .el.tall{width:clamp(180px,17vw,300px)}.el.wide{width:clamp(360px,44vw,760px)}.el.sm{width:clamp(150px,15vw,260px)}
 .el.r{right:-2%}.el.l{left:-2%}.el.t{top:4%}.el.b{bottom:3%}
-.alt .el{opacity:.2}
-@media (max-width:760px){.el{width:62vw!important;opacity:.14}.el.sm{display:none}}
+.alt .el{opacity:.1}
+@media (max-width:760px){.el{width:62vw!important;opacity:.08}.el.sm{display:none}}
 /* iOS / Safari fallbacks */
 body{overflow-x:hidden}
 .hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
@@ -865,7 +865,7 @@ em,.hero blockquote{font-style:normal!important}
 </header>
 
 <main>
-<section id="about"><div class="els" aria-hidden="true"><img class="el r t" src="img/el-stacked-slabs-gold.webp" alt="" loading="lazy" decoding="async"></div>
+<section id="about">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Profile</span><span class="ar">نبذة مهنية</span></p><h2><span class="en">Built on site, <em>controlled on paper</em></span><span class="ar">تنفيذ في الموقع، <em>وضبط على الورق</em></span></h2></div>
@@ -893,7 +893,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="experience" class="alt"><div class="els" aria-hidden="true"><img class="el l t tall" src="img/el-twist-tower-navy.webp" alt="" loading="lazy" decoding="async"><img class="el r b" src="img/el-wall-section-navy.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Career</span><span class="ar">المسيرة المهنية</span></p><h2><span class="en">Experience <em>timeline</em></span><span class="ar">الخط الزمني <em>للخبرات</em></span></h2></div>
@@ -977,7 +977,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="projects"><div class="els" aria-hidden="true"><img class="el r t" src="img/el-ribbon-block-gold.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Projects <em>portfolio</em></span><span class="ar">سجل <em>المشاريع</em></span></h2></div>
@@ -995,7 +995,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="gallery" class="alt"><div class="els" aria-hidden="true"><img class="el l b wide" src="img/el-surface-navy.webp" alt="" loading="lazy" decoding="async"></div>
+<section id="gallery" class="alt">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">From drawings to reality</span><span class="ar">من المخطط إلى الواقع</span></p><h2><span class="en">On site, <em>stage by stage</em></span><span class="ar">من الموقع، <em>مرحلة بمرحلة</em></span></h2></div>
@@ -1013,7 +1013,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="services"><div class="els" aria-hidden="true"><img class="el r b wide" src="img/el-shell-arch-gold.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/st_slab-1600.webp" srcset="img/st_slab-800.webp 800w, img/st_slab-1600.webp 1600w, img/st_slab.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_slab-1600.webp" srcset="img/st_slab-800.webp 800w, img/st_slab-1600.webp 1600w, img/st_slab.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">What I deliver</span><span class="ar">ما أقدّمه</span></p><h2><span class="en">Services</span><span class="ar">الخدمات</span></h2></div>
@@ -1042,7 +1042,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="skills" class="alt"><div class="els" aria-hidden="true"><img class="el r t" src="img/el-floor-plan-navy.webp" alt="" loading="lazy" decoding="async"><img class="el l b sm" src="img/el-node-detail-navy.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg lt" aria-hidden="true"></div>
+<section id="skills" class="alt"><div class="sec-bg lt" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Software</span><span class="ar">البرامج</span></p><h2><span class="en">Technical <em>skills</em></span><span class="ar">المهارات <em>التقنية</em></span></h2></div>
@@ -1065,7 +1065,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="documentation"><div class="els" aria-hidden="true"><img class="el l t" src="img/el-plan-small-gold.webp" alt="" loading="lazy" decoding="async"><img class="el r b sm" src="img/el-joint-star-gold.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Engineering workflow</span><span class="ar">سير العمل الهندسي</span></p><h2><span class="en">Documentation, <em>start to close-out</em></span><span class="ar">التوثيق، <em>من البداية حتى الإغلاق</em></span></h2></div>
@@ -1090,7 +1090,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="education" class="alt"><div class="els" aria-hidden="true"><img class="el r t" src="img/el-fluid-form-navy.webp" alt="" loading="lazy" decoding="async"><img class="el l b sm" src="img/el-dome-detail-navy.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg lt" aria-hidden="true"></div>
+<section id="education" class="alt"><div class="sec-bg lt" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Credentials</span><span class="ar">المؤهلات</span></p><h2><span class="en">Education &amp; <em>certifications</em></span><span class="ar">التعليم <em>والشهادات</em></span></h2></div>
@@ -1140,7 +1140,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="contact" class="contact"><div class="els" aria-hidden="true"><img class="el l t sm" src="img/el-column-detail-gold.webp" alt="" loading="lazy" decoding="async"><img class="el r b sm" src="img/el-node-plan-gold.webp" alt="" loading="lazy" decoding="async"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
   
   <div class="wrap c-grid">
     <div>
