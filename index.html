@@ -101,7 +101,7 @@ section{padding-block:clamp(72px,10vw,120px);position:relative}
 /* PROGRESS + NAV */
 .progress{position:fixed;top:0;inset-inline-start:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));z-index:60}
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
-.nav.solid{background:rgba(10,24,46,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--gold-line)}
+.nav.solid{background:rgba(10,24,46,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--gold-line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-navy)}
 .brand .mark{width:44px;height:44px;border:1px solid var(--gold-line);display:grid;place-items:center;background:rgba(255,255,255,.03)}.brand .mark img{width:34px;height:34px}
@@ -253,7 +253,7 @@ section{padding-block:clamp(72px,10vw,120px);position:relative}
 @media (max-width:600px){.proj-grid{grid-template-columns:1fr}}
 
 dialog{border:0;padding:0;max-width:min(760px,calc(100vw - 32px));width:100%;background:var(--card);color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
-dialog::backdrop{background:rgba(6,14,28,.75);backdrop-filter:blur(4px)}
+dialog::backdrop{background:rgba(6,14,28,.75);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 dialog[open]{animation:pop .35s cubic-bezier(.2,.7,.2,1)}
 @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
 .dlg-head{background:var(--navy);color:var(--on-navy);padding:28px 30px;position:relative;overflow:hidden}
@@ -420,7 +420,7 @@ dialog[open]{animation:pop .35s cubic-bezier(.2,.7,.2,1)}
 .contact h2 em{color:var(--gold-hi)}
 .contact .lede{color:#C8D0DE;margin-top:18px}
 .c-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,72px);align-items:start}
-.card{background:rgba(11,26,46,.74);backdrop-filter:blur(8px);border:1px solid var(--gold-line);padding:32px 30px}
+.card{background:rgba(11,26,46,.74);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--gold-line);padding:32px 30px}
 .card .who{display:flex;align-items:center;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--gold-line)}
 .card .who img{width:64px;height:64px;object-fit:cover;object-position:50% 15%;border:1px solid var(--gold)}
 .card .who b{font-family:var(--f-display);font-weight:400;font-size:26px;display:block;line-height:1.2}
@@ -601,7 +601,7 @@ html:has(dialog[open]){overflow:hidden}
 .stat{padding-block:22px 0;padding-inline:0 18px}
 .dlg-table th{padding:14px 0;padding-inline-end:18px}
 .i-prev{transform:rotate(180deg)}[dir="rtl"] .i-prev{transform:none}[dir="rtl"] .i-next{transform:rotate(180deg)}
-#lightbox .x{background:rgba(11,26,46,.6);backdrop-filter:blur(6px)}
+#lightbox .x{background:rgba(11,26,46,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 #lightbox img{min-height:200px}
 .about-photo img{object-position:50% 62%}
 .chip .n{font-variant-numeric:tabular-nums}
@@ -627,6 +627,20 @@ main>section,header.hero,footer{overflow-x:clip}
 @media (max-width:760px){footer{padding-bottom:92px}}
 @media (max-width:760px){
   .hero h1,:root[lang="ar"] .hero h1{font-size:clamp(34px,11.2vw,50px)!important}}
+@media (max-width:760px){.wa-float,[dir="rtl"] .wa-float{left:14px!important;right:auto!important;inset-inline-start:auto!important;bottom:calc(14px + env(safe-area-inset-bottom,0px))!important;opacity:.95}
+ .totop,[dir="rtl"] .totop{right:14px!important;left:auto!important}
+ .portrait{max-width:270px!important}}
+/* generated architectural sketches + skyline (client artwork) */
+.sketch{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/sketch-navy.webp) center/cover no-repeat;opacity:.2}
+.sketch.g{background-image:url(img/sketch-gold.webp);opacity:.14}
+.hero-bg .hero-photo{opacity:.28!important;mix-blend-mode:screen;width:70%!important}
+@media (max-width:860px){.sketch{background-size:220% auto;background-position:center top}.hero-bg .hero-photo{width:100%!important;opacity:.22!important}}
+/* iOS / Safari fallbacks */
+body{overflow-x:hidden}
+.hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
+[dir="rtl"] .hero-bg::after{background:linear-gradient(270deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
+@media (max-width:860px){.hero-bg::after,[dir="rtl"] .hero-bg::after{background:linear-gradient(180deg,rgba(11,26,46,.3),#0B1A2E 55%)}}
+
 /* real project photos as section backgrounds (4K masters via srcset) */
 main>section{position:relative;isolation:isolate}
 .sec-bg{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
@@ -658,6 +672,7 @@ main>section{position:relative;isolation:isolate}
 #gallery.alt,#education.alt{--paper:#ECD7BC;--paper-2:#ECD7BC;--card:#F7EEE1;background:#ECD7BC!important}
 .alt{--ink-soft:#4A566C;--line:rgba(14,32,56,.14)}
 /* Cairo everywhere */
+:root[lang="ar"] h1,:root[lang="ar"] .brand,:root[lang="ar"] .who b{font-variant-ligatures:no-common-ligatures no-discretionary-ligatures;font-feature-settings:"rlig" 0,"calt" 0,"liga" 0,"dlig" 0}
 h1,h2,h3{font-weight:700!important;letter-spacing:-.01em;line-height:1.25}
 .hero h1{font-weight:800!important;line-height:1.15!important;letter-spacing:-.02em}
 .stat b,.proj .plate .fig b{font-weight:700!important}
@@ -811,7 +826,7 @@ em,.hero blockquote{font-style:normal!important}
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"><img class="hero-photo" src="img/hero_resort-1600.webp" srcset="img/hero_resort-800.webp 800w, img/hero_resort-1600.webp 1600w, img/hero_resort.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="1" data-amp="1.15" aria-hidden="true"></canvas></div>
+  <div class="hero-bg"><img class="hero-photo" src="img/skyline-1600.webp" srcset="img/skyline-800.webp 800w, img/skyline-1600.webp 1600w, img/skyline.jpg 2752w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="1" data-amp="1.15" aria-hidden="true"></canvas></div>
   <div class="wrap hero-grid">
     <div class="in">
       <figure class="portrait">
@@ -871,7 +886,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="ink" data-seed="6" aria-hidden="true"></canvas></div>
+<section id="experience" class="alt"><div class="sketch" aria-hidden="true"></div><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="ink" data-seed="6" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Career</span><span class="ar">المسيرة المهنية</span></p><h2><span class="en">Experience <em>timeline</em></span><span class="ar">الخط الزمني <em>للخبرات</em></span></h2></div>
@@ -955,7 +970,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="2" data-flip="1" aria-hidden="true"></canvas></div>
+<section id="projects"><div class="sketch g" aria-hidden="true"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="2" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Projects <em>portfolio</em></span><span class="ar">سجل <em>المشاريع</em></span></h2></div>
@@ -973,7 +988,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="gallery" class="alt">
+<section id="gallery" class="alt"><div class="sketch" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">From drawings to reality</span><span class="ar">من المخطط إلى الواقع</span></p><h2><span class="en">On site, <em>stage by stage</em></span><span class="ar">من الموقع، <em>مرحلة بمرحلة</em></span></h2></div>
@@ -1020,7 +1035,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="skills" class="alt"><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="7" data-amp=".8" aria-hidden="true"></canvas></div>
+<section id="skills" class="alt"><div class="sketch" aria-hidden="true"></div><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="7" data-amp=".8" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Software</span><span class="ar">البرامج</span></p><h2><span class="en">Technical <em>skills</em></span><span class="ar">المهارات <em>التقنية</em></span></h2></div>
@@ -1043,7 +1058,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="4" data-flip="1" aria-hidden="true"></canvas></div>
+<section id="documentation"><div class="sketch g" aria-hidden="true"></div><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="4" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Engineering workflow</span><span class="ar">سير العمل الهندسي</span></p><h2><span class="en">Documentation, <em>start to close-out</em></span><span class="ar">التوثيق، <em>من البداية حتى الإغلاق</em></span></h2></div>
@@ -1068,7 +1083,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="education" class="alt"><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="8" data-amp=".8" data-flip="1" aria-hidden="true"></canvas></div>
+<section id="education" class="alt"><div class="sketch" aria-hidden="true"></div><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="8" data-amp=".8" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Credentials</span><span class="ar">المؤهلات</span></p><h2><span class="en">Education &amp; <em>certifications</em></span><span class="ar">التعليم <em>والشهادات</em></span></h2></div>
@@ -1389,14 +1404,14 @@ function Field(cv){
   gl.uniform3fv(U('C0'),P.c[0]);gl.uniform3fv(U('C1'),P.c[1]);gl.uniform3fv(U('C2'),P.c[2]);gl.uniform3fv(U('HI'),P.hi);
   gl.enable(gl.BLEND);P.add?gl.blendFunc(gl.SRC_ALPHA,gl.ONE):gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
   me.resize=()=>{const r=cv.getBoundingClientRect(),d=Math.min(2.5,devicePixelRatio||1);me.w=r.width;me.h=r.height;cv.width=Math.max(1,r.width*d|0);cv.height=Math.max(1,r.height*d|0);me.d=d;
-    const cols=Math.round(r.width<700?150:260),rows=Math.round(r.width<700?90:130),a=new Float32Array(cols*rows*2);let k=0;
+    const cols=Math.round(r.width<700?110:260),rows=Math.round(r.width<700?70:130),a=new Float32Array(cols*rows*2);let k=0;
     for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){a[k++]=i/(cols-1);a[k++]=j/(rows-1)}
     gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,a,gl.STATIC_DRAW);me.n=cols*rows;me.draw();};
   me.draw=()=>{if(!me.w)return;gl.viewport(0,0,cv.width,cv.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
     gl.uniform2f(U('R'),me.w,me.h);gl.uniform1f(U('T'),me.t);gl.uniform1f(U('A'),me.amp);gl.uniform1f(U('S'),me.seed);gl.uniform1f(U('FL'),me.flip);
     gl.uniform1f(U('DPR'),me.d);gl.uniform1f(U('AL'),me.al);gl.uniform2f(U('M'),me.mx,me.my);gl.drawArrays(gl.POINTS,0,me.n);};
   me.resize();return me;}
-const F=[...document.querySelectorAll('canvas.pwave')].map(Field).filter(Boolean);if(!F.length)return;
+const PH=matchMedia('(max-width:760px)').matches;if(PH)document.querySelectorAll('canvas.pwave').forEach((c,i)=>{if(!c.closest('.hero-bg,#contact'))c.remove()});const F=[...document.querySelectorAll('canvas.pwave')].map(Field).filter(Boolean);if(!F.length)return;
 let last=performance.now(),raf=0;
 function loop(ts){raf=requestAnimationFrame(loop);const dt=Math.min(0.05,(ts-last)/1000);last=ts;
   for(const f of F){if(!f.on)continue;f.t+=dt*0.45;f.mx+=(f.tmx-f.mx)*0.04;f.my+=(f.tmy-f.my)*0.04;f.draw();}}
