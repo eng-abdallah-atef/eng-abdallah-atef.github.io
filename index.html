@@ -654,12 +654,11 @@ main>section{position:relative;isolation:isolate}
 .hero-bg .hero-photo{opacity:.2}
 .sec-bg.dk img{opacity:.14}
 .sec-bg.lt img{opacity:.13}
-/* parametric skyline line-art (vector, original) */
-.skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;max-height:78%;object-fit:cover;object-position:bottom;pointer-events:none;z-index:1;opacity:.14;-webkit-mask-image:none!important;mask-image:none!important}
-.sec-bg img.skyline{width:100%;inset-inline-end:auto;top:auto;height:auto;opacity:.14}
+/* parametric skyline line-art (vector, original) — low band at the bottom of the section */
+.skyline,.sec-bg img.skyline,.hero-bg .skyline{position:absolute;left:0;right:0;bottom:0;top:auto;inset-inline-end:auto;width:100%;height:clamp(150px,20vw,320px);max-height:none;object-fit:cover;object-position:center bottom;pointer-events:none;z-index:1;opacity:.14;-webkit-mask-image:none!important;mask-image:none!important;transform:none}
 .alt .sec-bg img.skyline{opacity:.12;filter:none}
 .hero-bg .skyline{opacity:.16}
-@media (max-width:860px){.skyline,.sec-bg img.skyline{width:180%;max-width:none;left:50%;right:auto;transform:translateX(-50%);max-height:60%}}
+@media (max-width:860px){.skyline,.sec-bg img.skyline,.hero-bg .skyline{height:130px}}
 /* palette: Navy Ink #0E2038 · Light Sand #ECD7BC · Ivory Sand #F5E8D6 */
 #gallery.alt,#education.alt{--paper:#ECD7BC;--paper-2:#ECD7BC;--card:#F7EEE1;background:#ECD7BC!important}
 .alt{--ink-soft:#4A566C;--line:rgba(14,32,56,.14)}
