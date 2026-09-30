@@ -16,8 +16,8 @@
 <meta property="og:title" content="Eng. Abdallah Atef · م. عبدالله عاطف — Architectural Site Engineer">
 <meta property="og:description" content="Site execution, fit-out, QA/QC and technical office · Makkah, Saudi Arabia · مهندس معماري موقع ومكتب فني">
 <meta property="og:url" content="https://eng-abdallah-atef.github.io/">
-<meta property="og:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=6">
-<meta property="og:image:secure_url" content="https://eng-abdallah-atef.github.io/og.jpg?v=6">
+<meta property="og:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
+<meta property="og:image:secure_url" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
 <meta property="og:locale:alternate" content="ar_SA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eng. Abdallah Atef · Architectural Site Engineer">
-<meta name="twitter:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=6">
+<meta name="twitter:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -48,7 +48,7 @@
 }
 /* light "linen" sections inside the dark site */
 .alt{--paper:#F5E8D6; --paper-2:#F5E8D6; --card:#FCF6EC; --ink:#0E2038; --ink-soft:#4B5870; --line:rgba(14,27,46,.12);
-  --navy:#0E2038; --navy-2:#1B3A63; --gold:#C29A5B; --gold-ink:#8A6528; --gold-line:rgba(160,120,60,.45); --gold-soft:rgba(201,165,106,.18);
+  --navy:#0E2038; --navy-2:#1B3A63; --gold:#C29A5B; --gold-ink:#7D5A44; --gold-line:rgba(160,120,60,.45); --gold-soft:rgba(201,165,106,.18);
   --shadow:0 18px 40px -24px rgba(15,35,64,.35); color-scheme:light; background:#F5E8D6!important; color:var(--ink)}
 @font-face{font-family:"Cairo";src:url("fonts/Cairo-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:"Cairo";src:url("fonts/Cairo-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -647,6 +647,13 @@ main>section{position:relative;isolation:isolate}
   .sec-bg.dk img,.sec-bg.lt img{opacity:.16}.hero-bg .hero-photo{opacity:.4}
   .hero-bg::after,[dir="rtl"] .hero-bg::after{background:linear-gradient(180deg,color-mix(in srgb,var(--navy) 30%,transparent),var(--navy) 55%)!important}
 }
+/* parametric particle waves */
+.pwave{position:absolute;left:0;right:0;bottom:0;width:100%;height:82%;z-index:1;pointer-events:none;display:block;opacity:.1}
+.hero-bg .pwave{height:80%;z-index:1}
+.sec-bg .pwave{height:70%}
+.hero-bg .hero-photo{opacity:.2}
+.sec-bg.dk img{opacity:.14}
+.sec-bg.lt img{opacity:.13}
 /* palette: Navy Ink #0E2038 · Light Sand #ECD7BC · Ivory Sand #F5E8D6 */
 #gallery.alt,#education.alt{--paper:#ECD7BC;--paper-2:#ECD7BC;--card:#F7EEE1;background:#ECD7BC!important}
 .alt{--ink-soft:#4A566C;--line:rgba(14,32,56,.14)}
@@ -804,7 +811,7 @@ em,.hero blockquote{font-style:normal!important}
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"><img class="hero-photo" src="img/hero_resort-1600.webp" srcset="img/hero_resort-800.webp 800w, img/hero_resort-1600.webp 1600w, img/hero_resort.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="hero-bg"><img class="hero-photo" src="img/hero_resort-1600.webp" srcset="img/hero_resort-800.webp 800w, img/hero_resort-1600.webp 1600w, img/hero_resort.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"><canvas class="pwave" data-pal="steel" data-amp="1.15" data-seed="1" aria-hidden="true"></canvas></div>
   <div class="wrap hero-grid">
     <div class="in">
       <figure class="portrait">
@@ -864,7 +871,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_pour-1600.webp" srcset="img/st_pour-800.webp 800w, img/st_pour-1600.webp 1600w, img/st_pour.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_pour-1600.webp" srcset="img/st_pour-800.webp 800w, img/st_pour-1600.webp 1600w, img/st_pour.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="ink" data-seed="6" data-amp=".8" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Career</span><span class="ar">المسيرة المهنية</span></p><h2><span class="en">Experience <em>timeline</em></span><span class="ar">الخط الزمني <em>للخبرات</em></span></h2></div>
@@ -948,7 +955,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="2" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Projects <em>portfolio</em></span><span class="ar">سجل <em>المشاريع</em></span></h2></div>
@@ -984,7 +991,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_excav-1600.webp" srcset="img/st_excav-800.webp 800w, img/st_excav-1600.webp 1600w, img/st_excav.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_excav-1600.webp" srcset="img/st_excav-800.webp 800w, img/st_excav-1600.webp 1600w, img/st_excav.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="3" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">What I deliver</span><span class="ar">ما أقدّمه</span></p><h2><span class="en">Services</span><span class="ar">الخدمات</span></h2></div>
@@ -1013,7 +1020,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="skills" class="alt">
+<section id="skills" class="alt"><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="7" data-amp=".8" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Software</span><span class="ar">البرامج</span></p><h2><span class="en">Technical <em>skills</em></span><span class="ar">المهارات <em>التقنية</em></span></h2></div>
@@ -1036,7 +1043,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/qc_services-1600.webp" srcset="img/qc_services-800.webp 800w, img/qc_services-1600.webp 1600w, img/qc_services.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/qc_services-1600.webp" srcset="img/qc_services-800.webp 800w, img/qc_services-1600.webp 1600w, img/qc_services.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="4" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Engineering workflow</span><span class="ar">سير العمل الهندسي</span></p><h2><span class="en">Documentation, <em>start to close-out</em></span><span class="ar">التوثيق، <em>من البداية حتى الإغلاق</em></span></h2></div>
@@ -1061,7 +1068,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="education" class="alt">
+<section id="education" class="alt"><div class="sec-bg lt" aria-hidden="true"><canvas class="pwave" data-pal="ink" data-seed="8" data-amp=".8" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Credentials</span><span class="ar">المؤهلات</span></p><h2><span class="en">Education &amp; <em>certifications</em></span><span class="ar">التعليم <em>والشهادات</em></span></h2></div>
@@ -1111,7 +1118,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_central-1600.webp" srcset="img/pl_central-800.webp 800w, img/pl_central-1600.webp 1600w, img/pl_central.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"></div>
+<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_central-1600.webp" srcset="img/pl_central-800.webp 800w, img/pl_central-1600.webp 1600w, img/pl_central.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="5" aria-hidden="true"></canvas></div>
   
   <div class="wrap c-grid">
     <div>
@@ -1349,6 +1356,56 @@ if('IntersectionObserver' in window){
 }
 if(!reduce)document.querySelectorAll('[data-count]').forEach(el=>{const n=+el.dataset.count,s=el.dataset.suf||'',t0=performance.now();
   (function f(now){const k=Math.min(1,(now-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=Math.round(n*e)+(k===1?s:'');if(k<1)requestAnimationFrame(f)})(t0)});
+
+/* Parametric particle-wave fields — WebGL points, rendered at device pixel ratio (crisp on 4K/retina) */
+(function(){
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PAL={
+  gold:{c:[[0.47,0.59,0.77],[0.886,0.784,0.576],[0.961,0.910,0.839]],hi:[1,0.96,0.88],add:1},
+  steel:{c:[[0.42,0.62,0.88],[0.70,0.78,0.90],[0.886,0.784,0.576]],hi:[1,0.95,0.85],add:1},
+  ink:{c:[[0.055,0.125,0.22],[0.16,0.27,0.43],[0.49,0.353,0.267]],hi:[0.055,0.125,0.22],add:0}
+};
+const VS=`attribute vec2 a;uniform vec2 R;uniform float T,A,S,FL,DPR,AL;uniform vec2 M;uniform vec3 C0,C1,C2,HI;varying vec4 vC;
+float f(float X,float Z,float t){return A*(0.55*sin(0.75*X+0.55*Z+t+S)+0.30*sin(-0.5*X+0.9*Z-0.7*t+S*1.7)+0.12*sin(1.6*X-0.4*Z+1.3*t));}
+void main(){float w=R.x,h=R.y,F=h*0.72,hor=h*(0.26+M.y*0.03),camH=1.0,z0=0.95,z1=20.0;
+ float Z=z0+(z1-z0)*pow(a.y,1.25);float span=1.3*w*Z/F;float X=(a.x-0.5)*span;float Y=f(X*FL+M.x*1.5,Z,T);
+ float sx=w*0.5+X*F/Z;float sy=hor+(camH-Y)*F/Z;
+ gl_Position=vec4(sx/w*2.0-1.0,1.0-sy/h*2.0,0.0,1.0);
+ float d=1.0-(Z-z0)/(z1-z0);float cr=clamp((Y/A+0.9)/1.8,0.0,1.0);
+ float edge=smoothstep(0.0,0.08,a.x)*smoothstep(1.0,0.92,a.x);float top=smoothstep(hor,hor+h*0.20,sy);
+ gl_PointSize=clamp((0.8+F/Z*0.010)*(0.85+0.4*cr),1.0,4.6)*DPR;
+ float u=a.x;vec3 c=u<0.5?mix(C0,C1,u*2.0):mix(C1,C2,u*2.0-1.0);c=mix(c,HI,cr*cr*0.65);
+ float bot=smoothstep(h*1.02,h*0.80,sy);vC=vec4(c,(0.12+0.88*d)*(0.45+0.55*cr)*1.15*edge*top*mix(0.55,1.0,bot)*AL);}`;
+const FS=`precision mediump float;varying vec4 vC;void main(){vec2 p=gl_PointCoord-0.5;float r=length(p);float k=smoothstep(0.5,0.28,r);if(k<=0.0)discard;gl_FragColor=vec4(vC.rgb,vC.a*k);}`;
+function Field(cv){
+  const gl=cv.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true});if(!gl)return null;
+  const sh=(t,s)=>{const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o};
+  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);
+  if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return null;gl.useProgram(pr);
+  const P=PAL[cv.dataset.pal||'gold'],U=n=>gl.getUniformLocation(pr,n);
+  const me={cv,gl,on:false,t:(+cv.dataset.seed||0)*3,mx:0,my:0,tmx:0,tmy:0,n:0,
+    amp:0.34*(+cv.dataset.amp||1),seed:+cv.dataset.seed||0,flip:cv.dataset.flip==='1'?-1:1,al:+(cv.dataset.alpha||1)};
+  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);const loc=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  gl.uniform3fv(U('C0'),P.c[0]);gl.uniform3fv(U('C1'),P.c[1]);gl.uniform3fv(U('C2'),P.c[2]);gl.uniform3fv(U('HI'),P.hi);
+  gl.enable(gl.BLEND);P.add?gl.blendFunc(gl.SRC_ALPHA,gl.ONE):gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+  me.resize=()=>{const r=cv.getBoundingClientRect(),d=Math.min(2.5,devicePixelRatio||1);me.w=r.width;me.h=r.height;cv.width=Math.max(1,r.width*d|0);cv.height=Math.max(1,r.height*d|0);me.d=d;
+    const cols=Math.round(r.width<700?150:260),rows=Math.round(r.width<700?90:130),a=new Float32Array(cols*rows*2);let k=0;
+    for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){a[k++]=i/(cols-1);a[k++]=j/(rows-1)}
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,a,gl.STATIC_DRAW);me.n=cols*rows;me.draw();};
+  me.draw=()=>{if(!me.w)return;gl.viewport(0,0,cv.width,cv.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform2f(U('R'),me.w,me.h);gl.uniform1f(U('T'),me.t);gl.uniform1f(U('A'),me.amp);gl.uniform1f(U('S'),me.seed);gl.uniform1f(U('FL'),me.flip);
+    gl.uniform1f(U('DPR'),me.d);gl.uniform1f(U('AL'),me.al);gl.uniform2f(U('M'),me.mx,me.my);gl.drawArrays(gl.POINTS,0,me.n);};
+  me.resize();return me;}
+const F=[...document.querySelectorAll('canvas.pwave')].map(Field).filter(Boolean);if(!F.length)return;
+let last=performance.now(),raf=0;
+function loop(ts){raf=requestAnimationFrame(loop);const dt=Math.min(0.05,(ts-last)/1000);last=ts;
+  for(const f of F){if(!f.on)continue;f.t+=dt*0.45;f.mx+=(f.tmx-f.mx)*0.04;f.my+=(f.tmy-f.my)*0.04;f.draw();}}
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{const f=F.find(f=>f.cv===e.target);if(f)f.on=e.isIntersecting}),{rootMargin:'80px'});F.forEach(f=>io.observe(f.cv));}else F.forEach(f=>f.on=true);
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>F.forEach(f=>f.resize()),150)});
+addEventListener('pointermove',e=>{const nx=e.clientX/innerWidth-0.5,ny=e.clientY/innerHeight-0.5;F.forEach(f=>{f.tmx=nx;f.tmy=ny})},{passive:true});
+document.addEventListener('visibilitychange',()=>{cancelAnimationFrame(raf);if(!document.hidden&&!RM){last=performance.now();raf=requestAnimationFrame(loop)}});
+if(!RM)raf=requestAnimationFrame(loop);
+})();
 
 </script>
 </body>
