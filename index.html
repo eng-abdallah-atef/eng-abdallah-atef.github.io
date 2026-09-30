@@ -652,20 +652,12 @@ main>section,header.hero,footer{overflow-x:clip}
 footer{position:relative;isolation:isolate;overflow:hidden}
 .foot-city{position:absolute;left:0;right:0;bottom:0;top:auto;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;opacity:.11;z-index:-1;pointer-events:none}
 footer{min-height:calc(100vw * 941 / 1672);display:flex;flex-direction:column;justify-content:flex-end}
-/* === Animated architectural pattern system (replaces project photo backgrounds) === */
+/* === Parametric architectural background system (generative, canvas) === */
 .arch-pat{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%)}
-.arch-pat::before,.arch-pat::after{content:"";position:absolute;inset:-480px;will-change:transform;background-repeat:repeat}
-.arch-pat::before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%23F5E8D6%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M0%200V480M0%200H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M24%200V480M0%2024H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M48%200V480M0%2048H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M72%200V480M0%2072H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M96%200V480M0%2096H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M120%200V480M0%20120H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M144%200V480M0%20144H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M168%200V480M0%20168H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M192%200V480M0%20192H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M216%200V480M0%20216H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M240%200V480M0%20240H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M264%200V480M0%20264H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M288%200V480M0%20288H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M312%200V480M0%20312H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M336%200V480M0%20336H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M360%200V480M0%20360H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M384%200V480M0%20384H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M408%200V480M0%20408H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M432%200V480M0%20432H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M456%200V480M0%20456H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M480%200V480M0%20480H480%22%20stroke-opacity%3D%220.9%22/%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%22120%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M94%20120H146M120%2094V146%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22360%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M334%20360H386M360%20334V386%22/%3E%3Cpath%20d%3D%22M144%20432H456M144%20424V440M456%20424V440M140%20436l8-8M452%20436l8-8%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M264%2096V168M264%20168A72%2072%200%200%201%20336%2096%22%20stroke-dasharray%3D%224%204%22/%3E%3Cpath%20d%3D%22M24%20312l40-40%22/%3E%3Cpath%20d%3D%22M34%20312l40-40%22/%3E%3Cpath%20d%3D%22M44%20312l40-40%22/%3E%3Cpath%20d%3D%22M54%20312l40-40%22/%3E%3Cpath%20d%3D%22M64%20312l40-40%22/%3E%3Cpath%20d%3D%22M74%20312l40-40%22/%3E%3Cpath%20d%3D%22M84%20312l40-40%22/%3E%3Cpath%20d%3D%22M94%20312l40-40%22/%3E%3Crect%20x%3D%2224%22%20y%3D%22264%22%20width%3D%22120%22%20height%3D%2248%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M300%20250l60-34%2060%2034-60%2034z%20M300%20250v60l60%2034%2060-34v-60%20M360%20284v60%22%20stroke-width%3D%221.1%22/%3E%3C/svg%3E");background-size:480px 480px;opacity:.065;animation:archA 90s linear infinite}
-.arch-pat::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%23ECD7BC%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M0%20480L480%200M240%20480L480%20240M0%20240L240%200%22%20stroke-dasharray%3D%222%2010%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2290%22%20stroke-dasharray%3D%221%206%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2254%22/%3E%3Cpath%20d%3D%22M60%20380h160v-120h-60v60h-100z%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M40%2060h120M40%2052v16M160%2052v16%22%20/%3E%3Cpath%20d%3D%22M300%20400c40-60%20100-60%20140%200%22%20/%3E%3C/svg%3E");background-size:960px 960px;opacity:.05;animation:archB 140s linear infinite}
-.alt .arch-pat::before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%230E2038%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M0%200V480M0%200H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M24%200V480M0%2024H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M48%200V480M0%2048H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M72%200V480M0%2072H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M96%200V480M0%2096H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M120%200V480M0%20120H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M144%200V480M0%20144H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M168%200V480M0%20168H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M192%200V480M0%20192H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M216%200V480M0%20216H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M240%200V480M0%20240H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M264%200V480M0%20264H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M288%200V480M0%20288H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M312%200V480M0%20312H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M336%200V480M0%20336H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M360%200V480M0%20360H480%22%20stroke-opacity%3D%220.9%22/%3E%3Cpath%20d%3D%22M384%200V480M0%20384H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M408%200V480M0%20408H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M432%200V480M0%20432H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M456%200V480M0%20456H480%22%20stroke-opacity%3D%220.35%22/%3E%3Cpath%20d%3D%22M480%200V480M0%20480H480%22%20stroke-opacity%3D%220.9%22/%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%22120%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M94%20120H146M120%2094V146%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22360%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M334%20360H386M360%20334V386%22/%3E%3Cpath%20d%3D%22M144%20432H456M144%20424V440M456%20424V440M140%20436l8-8M452%20436l8-8%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M264%2096V168M264%20168A72%2072%200%200%201%20336%2096%22%20stroke-dasharray%3D%224%204%22/%3E%3Cpath%20d%3D%22M24%20312l40-40%22/%3E%3Cpath%20d%3D%22M34%20312l40-40%22/%3E%3Cpath%20d%3D%22M44%20312l40-40%22/%3E%3Cpath%20d%3D%22M54%20312l40-40%22/%3E%3Cpath%20d%3D%22M64%20312l40-40%22/%3E%3Cpath%20d%3D%22M74%20312l40-40%22/%3E%3Cpath%20d%3D%22M84%20312l40-40%22/%3E%3Cpath%20d%3D%22M94%20312l40-40%22/%3E%3Crect%20x%3D%2224%22%20y%3D%22264%22%20width%3D%22120%22%20height%3D%2248%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M300%20250l60-34%2060%2034-60%2034z%20M300%20250v60l60%2034%2060-34v-60%20M360%20284v60%22%20stroke-width%3D%221.1%22/%3E%3C/svg%3E");opacity:.07}
-.alt .arch-pat::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22480%22%20fill%3D%22none%22%20stroke%3D%22%230B1A2E%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M0%20480L480%200M240%20480L480%20240M0%20240L240%200%22%20stroke-dasharray%3D%222%2010%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2290%22%20stroke-dasharray%3D%221%206%22/%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22140%22%20r%3D%2254%22/%3E%3Cpath%20d%3D%22M60%20380h160v-120h-60v60h-100z%22%20stroke-width%3D%221.2%22/%3E%3Cpath%20d%3D%22M40%2060h120M40%2052v16M160%2052v16%22%20/%3E%3Cpath%20d%3D%22M300%20400c40-60%20100-60%20140%200%22%20/%3E%3C/svg%3E");opacity:.055}
-@keyframes archA{from{transform:translate3d(0,0,0)}to{transform:translate3d(-480px,-480px,0)}}
-@keyframes archB{from{transform:translate3d(-480px,0,0) rotate(0)}to{transform:translate3d(0,-480px,0)}}
-.arch-pat .px{position:absolute;inset:0;transform:translate3d(0,var(--py,0px),0);transition:transform .2s linear}
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%)}
+.arch-pat canvas{position:absolute;left:0;top:0;width:100%;display:block;will-change:transform;opacity:.085}
+.alt .arch-pat canvas{opacity:.08}
 main>section>.wrap,main>section>*:not(.arch-pat){position:relative;z-index:1}
-@media (max-width:760px){.arch-pat::before{background-size:360px 360px;animation-duration:120s}.arch-pat::after{display:none}}
-@media (prefers-reduced-motion:reduce){.arch-pat::before,.arch-pat::after{animation:none}}
 /* iOS / Safari fallbacks */
 body{overflow-x:hidden}
 .hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
@@ -1404,6 +1396,75 @@ if(!reduce)document.querySelectorAll('[data-count]').forEach(el=>{const n=+el.da
   (function f(now){const k=Math.min(1,(now-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=Math.round(n*e)+(k===1?s:'');if(k<1)requestAnimationFrame(f)})(t0)});
 
 
+
+/* Parametric architectural background — generative ribbons (ruled surfaces) + attractor-driven facade lattice.
+   One viewport-sized canvas per section, drawn only while visible. Brand colours, 7–8% opacity. */
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,MOB=matchMedia('(max-width:760px)').matches;
+var DPR=Math.min(MOB?1.5:2,window.devicePixelRatio||1),FPS=MOB?24:30;
+var hosts=[].slice.call(document.querySelectorAll('.arch-pat'));if(!hosts.length)return;
+var VW=document.documentElement.clientWidth,VH=window.innerHeight;
+var items=hosts.map(function(h,i){var c=document.createElement('canvas');h.appendChild(c);
+  var light=!!h.closest('.alt');
+  return{h:h,c:c,x:c.getContext('2d'),sec:h.parentElement,i:i,s:i*1.73+0.4,light:light,on:false,w:0,hh:0,
+    c1:light?'14,32,56':'245,232,214',c2:light?'11,26,46':'236,215,188'};});
+function size(it){var w=it.h.clientWidth||VW,h=VH;if(it.w===w&&it.hh===h)return;it.w=w;it.hh=h;
+  it.c.width=Math.round(w*DPR);it.c.height=Math.round(h*DPR);it.c.style.height=h+'px';}
+function place(it){var r=it.sec.getBoundingClientRect();var y=Math.min(Math.max(-r.top,0),Math.max(0,r.height-VH));
+  it.c.style.transform='translate3d(0,'+y+'px,0)';it.p=Math.min(Math.max((VH-r.top)/(r.height+VH),0),1);}
+function smooth(X,a){X.moveTo(a[0],a[1]);for(var i=2;i<a.length-2;i+=2){var mx=(a[i]+a[i+2])/2,my=(a[i+1]+a[i+3])/2;X.quadraticCurveTo(a[i],a[i+1],mx,my);}}
+function ribbon(X,W,H,t,o){var N=o.n,pa=[],pb=[],fa=[],i;
+  for(i=0;i<=N;i++){var u=i/N,x=-0.08*W+u*1.16*W,ph=u*Math.PI*2*o.fr+t*o.sp+o.s;
+    var y=o.y*H+(Math.sin(ph)*0.62+Math.sin(ph*0.47+t*o.sp*0.6+o.s*1.3)*0.38)*o.amp*H+o.py;
+    var th=u*Math.PI*o.tw+t*o.sp*0.8+o.s*2.1,g=o.gap*H*(0.75+0.25*Math.sin(t*0.21+u*3+o.s));
+    pa.push(x,y);pb.push(x+Math.sin(th)*g*0.55,y+Math.cos(th)*g);fa.push(Math.abs(Math.cos(th)));}
+  X.lineWidth=o.lw;
+  for(var b=0;b<3;b++){X.beginPath();for(i=0;i<=N;i++){var k=fa[i]<0.33?0:fa[i]<0.66?1:2;if(k!==b)continue;
+      X.moveTo(pa[2*i],pa[2*i+1]);X.lineTo(pb[2*i],pb[2*i+1]);}
+    X.strokeStyle='rgba('+o.col+','+(o.a*(0.35+0.32*b)).toFixed(3)+')';X.stroke();}
+  X.lineWidth=o.lw*1.35;X.strokeStyle='rgba('+o.col+','+o.a+')';X.beginPath();smooth(X,pa);smooth(X,pb);X.stroke();}
+function facade(X,W,H,t,it){var S=MOB?40:48,side=it.i%2?0.2:0.8;
+  var cx=W*(side+0.05*Math.sin(t*0.05+it.s)),cy=H*(0.42+0.08*Math.cos(t*0.043+it.s)),R=Math.max(W,H)*(MOB?0.62:0.5);
+  var gr=X.createRadialGradient(cx,cy,0,cx,cy,R);gr.addColorStop(0,'rgba('+it.c2+',.85)');gr.addColorStop(0.55,'rgba('+it.c2+',.42)');gr.addColorStop(1,'rgba('+it.c2+',0)');
+  X.strokeStyle=gr;
+  var ox=(t*5)%S-S+(-it.p*40),oy=(t*3)%S-S-it.p*70;  // slow diagonal drift + parallax
+  var ax=cx+Math.cos(t*0.09+it.s)*R*0.35,ay=cy+Math.sin(t*0.07+it.s*1.4)*R*0.3;   // moving attractor
+  var x0=Math.max(-S,cx-R),x1=Math.min(W+S,cx+R),y0=Math.max(-S,cy-R),y1=Math.min(H+S,cy+R),m=0.5+0.5*Math.sin(t*0.11+it.s),K=8,a,j,k,q;
+  // lattice lines x±y = S/2 + kS
+  X.lineWidth=0.55;X.beginPath();
+  for(q=Math.floor((x0+y0-ox-oy)/S)-1;q<=Math.ceil((x1+y1-ox-oy)/S)+1;q++){var c=ox+oy+S/2+q*S;X.moveTo(c-y0,y0);X.lineTo(c-y1,y1);}
+  for(q=Math.floor((x0-y1-ox+oy)/S)-1;q<=Math.ceil((x1-y0-ox+oy)/S)+1;q++){var d=ox-oy+S/2+q*S;X.moveTo(d+y0,y0);X.lineTo(d+y1,y1);}
+  X.stroke();
+  // apertures: diamond <-> circle morph, size from attractor field, offset = panel tilt
+  X.lineWidth=0.75;X.beginPath();
+  for(j=Math.floor((y0-oy)/(S/2));j<=Math.ceil((y1-oy)/(S/2));j++){for(k=Math.floor((x0-ox)/S);k<=Math.ceil((x1-ox)/S);k++){
+    var px=ox+k*S+(j&1?S/2:0),py=oy+j*S/2,dx=px-ax,dy=py-ay,dd=Math.sqrt(dx*dx+dy*dy);
+    if((px-cx)*(px-cx)+(py-cy)*(py-cy)>R*R)continue;
+    var f=0.5+0.5*Math.sin(dd/(S*3.2)-t*0.55)*Math.cos(dd/(S*9)+t*0.13);
+    var r=S/2*(0.16+0.6*f),tx=px-dx/(dd+1)*(1-f)*S*0.14,ty=py-dy/(dd+1)*(1-f)*S*0.14;
+    for(a=0;a<=K;a++){var an=a/K*Math.PI*2,ca=Math.cos(an),sa=Math.sin(an),rd=1/(Math.abs(ca)+Math.abs(sa)),rr=r*(rd*(1-m)+0.78*m);
+      a?X.lineTo(tx+ca*rr,ty+sa*rr):X.moveTo(tx+ca*rr,ty+sa*rr);}}}
+  X.stroke();}
+function draw(it,t){size(it);place(it);var X=it.x,W=it.w,H=it.hh;X.setTransform(DPR,0,0,DPR,0,0);X.clearRect(0,0,W,H);
+  var br=1+0.05*Math.sin(t*0.26+it.s);                     // breathing zoom (~24s)
+  X.save();X.translate(W/2,H/2);X.scale(br,br);X.rotate(0.03*Math.sin(t*0.06+it.s));X.translate(-W/2,-H/2);
+  facade(X,W,H,t,it);
+  var up=it.i%2?0.36:0.64;
+  ribbon(X,W,H,t,{n:MOB?30:54,y:1-up,amp:0.1,gap:0.2,fr:0.8,tw:2.2,sp:0.16,s:it.s+2,a:0.55,lw:0.6,col:it.c2,py:-it.p*40});
+  if(!MOB)ribbon(X,W,H,t,{n:78,y:up,amp:0.14,gap:0.16,fr:1.1,tw:3.1,sp:0.22,s:it.s,a:0.95,lw:0.85,col:it.c1,py:-it.p*110});
+  else ribbon(X,W,H,t,{n:36,y:up,amp:0.08,gap:0.14,fr:0.9,tw:2.4,sp:0.2,s:it.s,a:0.95,lw:0.8,col:it.c1,py:-it.p*70});
+  X.restore();}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){var it=items.filter(function(x){return x.h===e.target})[0];
+  if(it){it.on=e.isIntersecting;if(it.on&&RM)draw(it,it.s*9);}})},{rootMargin:'60px 0px'});items.forEach(function(it){io.observe(it.h)});}
+else items.forEach(function(it){it.on=true});
+addEventListener('scroll',function(){items.forEach(function(it){if(it.on)place(it)})},{passive:true});
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){VW=document.documentElement.clientWidth;VH=window.innerHeight;
+  items.forEach(function(it){if(it.on)draw(it,performance.now()/1000)})},150)});
+if(RM)return;var last=0,raf=0;
+function loop(now){raf=requestAnimationFrame(loop);if(now-last<1000/FPS)return;last=now;var t=now/1000;for(var i=0;i<items.length;i++)if(items[i].on)draw(items[i],t);}
+document.addEventListener('visibilitychange',function(){cancelAnimationFrame(raf);if(!document.hidden)raf=requestAnimationFrame(loop)});
+raf=requestAnimationFrame(loop);
+})();
 
 </script>
 </body>
