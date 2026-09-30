@@ -633,7 +633,7 @@ main>section,header.hero,footer{overflow-x:clip}
 /* generated architectural sketches + skyline (client artwork) */
 .sketch{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/sketch-navy.webp) center/cover no-repeat;opacity:.2}
 .sketch.g{background-image:url(img/sketch-gold.webp);opacity:.14}
-.hero-bg .hero-photo{opacity:.28!important;mix-blend-mode:screen;width:70%!important}
+.hero-bg .hero-photo{opacity:.23!important;mix-blend-mode:screen;width:70%!important}
 @media (max-width:860px){.sketch{background-size:220% auto;background-position:center top}.hero-bg .hero-photo{width:100%!important;opacity:.22!important}}
 /* individual architectural sketch elements (client artwork, 4x upscaled) */
 .els{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
@@ -642,6 +642,15 @@ main>section,header.hero,footer{overflow-x:clip}
 .el.r{right:-2%}.el.l{left:-2%}.el.t{top:4%}.el.b{bottom:3%}
 .alt .el{opacity:.1}
 @media (max-width:760px){.el{width:62vw!important;opacity:.08}.el.sm{display:none}}
+/* mobile backgrounds: fit to screen, visible on iPhone */
+@media (max-width:860px){
+ .hero-bg .hero-photo,[dir="rtl"] .hero-bg .hero-photo{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;object-position:62% center;opacity:.17!important;mix-blend-mode:normal!important;clip-path:none!important;animation:none!important;-webkit-mask-image:none!important;mask-image:none!important;transform:none!important}
+ .sec-bg img,[dir="rtl"] .sec-bg img{inset:0!important;width:100%!important;height:100%!important;object-fit:cover;-webkit-mask-image:none!important;mask-image:none!important;opacity:.2!important;transform:none!important}
+}
+@media (max-width:860px){.hero-bg::after,[dir="rtl"] .hero-bg::after{background:linear-gradient(180deg,rgba(11,26,46,.15) 0%,rgba(11,26,46,.35) 60%,#0B1A2E 100%)!important}.hero-bg .hero-photo,[dir="rtl"] .hero-bg .hero-photo{opacity:.5!important}}
+/* footer city band */
+footer{position:relative;isolation:isolate;overflow:hidden}
+.foot-city{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;opacity:.15;z-index:-1;pointer-events:none}
 /* iOS / Safari fallbacks */
 body{overflow-x:hidden}
 .hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
@@ -838,7 +847,7 @@ em,.hero blockquote{font-style:normal!important}
     <div class="in">
       <figure class="portrait">
         <div class="ring"><div class="frame"><img src="img/portrait-800.webp" srcset="img/portrait-400.webp 400w, img/portrait-800.webp 800w, img/portrait-1600.webp 1600w, img/portrait.jpg 3840w" sizes="(max-width:860px) 300px, 420px" width="1600" height="2291" alt="Eng. Abdallah Atef" fetchpriority="high"></div></div>
-        <div class="tag"><span class="en">SCE No.</span><span class="ar">هيئة المهندسين</span> <bdi>1225314</bdi></div>
+        <div class="tag"><span class="en">SCE No.</span><span class="ar">الهيئة السعودية للمهندسين</span> <bdi>1225314</bdi></div>
       </figure>
     </div>
     <div>
@@ -1179,7 +1188,7 @@ em,.hero blockquote{font-style:normal!important}
 </section>
 </main>
 
-<footer>
+<footer><img class="foot-city" src="img/footer-city-1600.webp" srcset="img/footer-city-800.webp 800w, img/footer-city-1600.webp 1600w, img/footer-city.jpg 1672w" sizes="100vw" alt="" loading="lazy" decoding="async">
   <div class="wrap">
     <div class="f-logo"><img src="logo/logo-dark.svg" width="230" height="177" alt="Abdullah Atef — Architecture | Execution | Development" loading="lazy"></div>
     <p class="f-social"><a href="https://www.linkedin.com/in/abdallah-atef-60054b41b" target="_blank" rel="noopener me" aria-label="LinkedIn"><svg class="li"><use href="#i-li"/></svg><span>linkedin.com/in/abdallah-atef</span></a></p>
