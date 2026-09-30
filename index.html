@@ -16,8 +16,8 @@
 <meta property="og:title" content="Eng. Abdallah Atef · م. عبدالله عاطف — Architectural Site Engineer">
 <meta property="og:description" content="Site execution, fit-out, QA/QC and technical office · Makkah, Saudi Arabia · مهندس معماري موقع ومكتب فني">
 <meta property="og:url" content="https://eng-abdallah-atef.github.io/">
-<meta property="og:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
-<meta property="og:image:secure_url" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
+<meta property="og:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=8">
+<meta property="og:image:secure_url" content="https://eng-abdallah-atef.github.io/og.jpg?v=8">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
 <meta property="og:locale:alternate" content="ar_SA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eng. Abdallah Atef · Architectural Site Engineer">
-<meta name="twitter:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=7">
+<meta name="twitter:image" content="https://eng-abdallah-atef.github.io/og.jpg?v=8">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -652,13 +652,8 @@ main>section{position:relative;isolation:isolate}
 .hero-bg .pwave{height:80%;z-index:1}
 .sec-bg .pwave{height:70%}
 .hero-bg .hero-photo{opacity:.2}
-.sec-bg.dk img{opacity:.14}
-.sec-bg.lt img{opacity:.13}
-/* parametric skyline line-art (vector, original) — low band at the bottom of the section */
-.skyline,.sec-bg img.skyline,.hero-bg .skyline{position:absolute;left:0;right:0;bottom:0;top:auto;inset-inline-end:auto;width:100%;height:clamp(150px,20vw,320px);max-height:none;object-fit:cover;object-position:center bottom;pointer-events:none;z-index:1;opacity:.14;-webkit-mask-image:none!important;mask-image:none!important;transform:none}
-.alt .sec-bg img.skyline{opacity:.12;filter:none}
-.hero-bg .skyline{opacity:.16}
-@media (max-width:860px){.skyline,.sec-bg img.skyline,.hero-bg .skyline{height:130px}}
+.sec-bg.dk img{opacity:.22}
+.sec-bg.lt img{opacity:.18}
 /* palette: Navy Ink #0E2038 · Light Sand #ECD7BC · Ivory Sand #F5E8D6 */
 #gallery.alt,#education.alt{--paper:#ECD7BC;--paper-2:#ECD7BC;--card:#F7EEE1;background:#ECD7BC!important}
 .alt{--ink-soft:#4A566C;--line:rgba(14,32,56,.14)}
@@ -816,7 +811,7 @@ em,.hero blockquote{font-style:normal!important}
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"><img class="hero-photo" src="img/hero_resort-1600.webp" srcset="img/hero_resort-800.webp 800w, img/hero_resort-1600.webp 1600w, img/hero_resort.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"><img class="skyline" src="art/skyline-gold.svg" alt="" decoding="async"></div>
+  <div class="hero-bg"><img class="hero-photo" src="img/hero_resort-1600.webp" srcset="img/hero_resort-800.webp 800w, img/hero_resort-1600.webp 1600w, img/hero_resort.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" fetchpriority="high" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="1" data-amp="1.15" aria-hidden="true"></canvas></div>
   <div class="wrap hero-grid">
     <div class="in">
       <figure class="portrait">
@@ -876,7 +871,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_pour-1600.webp" srcset="img/st_pour-800.webp 800w, img/st_pour-1600.webp 1600w, img/st_pour.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><img class="skyline" src="art/skyline-cocoa.svg" alt="" loading="lazy" decoding="async"></div>
+<section id="experience" class="alt"><div class="sec-bg lt" aria-hidden="true"><img src="img/st_rebar-1600.webp" srcset="img/st_rebar-800.webp 800w, img/st_rebar-1600.webp 1600w, img/st_rebar.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="ink" data-seed="6" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Career</span><span class="ar">المسيرة المهنية</span></p><h2><span class="en">Experience <em>timeline</em></span><span class="ar">الخط الزمني <em>للخبرات</em></span></h2></div>
@@ -960,7 +955,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="2" data-flip="1" aria-hidden="true"></canvas></div>
+<section id="projects"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_slide-1600.webp" srcset="img/pl_slide-800.webp 800w, img/pl_slide-1600.webp 1600w, img/pl_slide.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="2" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></p><h2><span class="en">Projects <em>portfolio</em></span><span class="ar">سجل <em>المشاريع</em></span></h2></div>
@@ -996,7 +991,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_excav-1600.webp" srcset="img/st_excav-800.webp 800w, img/st_excav-1600.webp 1600w, img/st_excav.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><img class="skyline" src="art/skyline-gold.svg" alt="" loading="lazy" decoding="async"></div>
+<section id="services"><div class="sec-bg dk" aria-hidden="true"><img src="img/st_slab-1600.webp" srcset="img/st_slab-800.webp 800w, img/st_slab-1600.webp 1600w, img/st_slab.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="3" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">What I deliver</span><span class="ar">ما أقدّمه</span></p><h2><span class="en">Services</span><span class="ar">الخدمات</span></h2></div>
@@ -1048,7 +1043,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/qc_services-1600.webp" srcset="img/qc_services-800.webp 800w, img/qc_services-1600.webp 1600w, img/qc_services.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="4" data-flip="1" aria-hidden="true"></canvas></div>
+<section id="documentation"><div class="sec-bg dk" aria-hidden="true"><img src="img/fit_suspended-1600.webp" srcset="img/fit_suspended-800.webp 800w, img/fit_suspended-1600.webp 1600w, img/fit_suspended.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="gold" data-seed="4" data-flip="1" aria-hidden="true"></canvas></div>
   <div class="wrap">
     <div class="sec-head">
       <div><p class="mono eyebrow"><span class="en">Engineering workflow</span><span class="ar">سير العمل الهندسي</span></p><h2><span class="en">Documentation, <em>start to close-out</em></span><span class="ar">التوثيق، <em>من البداية حتى الإغلاق</em></span></h2></div>
@@ -1123,7 +1118,7 @@ em,.hero blockquote{font-style:normal!important}
   </div>
 </section>
 
-<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_central-1600.webp" srcset="img/pl_central-800.webp 800w, img/pl_central-1600.webp 1600w, img/pl_central.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><img class="skyline" src="art/skyline-gold.svg" alt="" loading="lazy" decoding="async"></div>
+<section id="contact" class="contact"><div class="sec-bg dk" aria-hidden="true"><img src="img/pl_poolside-1600.webp" srcset="img/pl_poolside-800.webp 800w, img/pl_poolside-1600.webp 1600w, img/pl_poolside.jpg 3840w" sizes="(max-width:860px) 100vw, 62vw" alt="" loading="lazy" decoding="async"><canvas class="pwave" data-pal="steel" data-seed="5" aria-hidden="true"></canvas></div>
   
   <div class="wrap c-grid">
     <div>
