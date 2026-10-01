@@ -653,14 +653,14 @@ footer{position:relative;isolation:isolate;overflow:hidden}
 .foot-city{position:absolute;left:0;right:0;bottom:0;top:auto;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;opacity:.11;z-index:-1;pointer-events:none}
 footer{min-height:calc(100vw * 941 / 1672);display:flex;flex-direction:column;justify-content:flex-end}
 /* === Parametric architectural background system (generative, canvas) === */
-.arch-pat{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+.arch-pat{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:visible;clip-path:inset(0);
   -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%)}
-.arch-pat canvas{position:absolute;left:0;top:0;width:100%;display:block;will-change:transform;opacity:.07}
+.arch-pat canvas{position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height:100vh;display:block;opacity:.07;transform:translateZ(0);backface-visibility:hidden}
 .alt .arch-pat canvas{opacity:.07}
 main>section>.wrap,main>section>*:not(.arch-pat){position:relative;z-index:1}
 .f-logo img{width:clamp(260px,30vw,400px)!important;height:auto!important;max-width:86vw}
 /* iOS / Safari fallbacks */
-body{overflow-x:hidden}
+body{overflow-x:clip}@supports not (overflow:clip){body{overflow-x:hidden}}
 .hero-bg::after{background:linear-gradient(90deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
 [dir="rtl"] .hero-bg::after{background:linear-gradient(270deg,#0B1A2E 30%,rgba(11,26,46,.55) 65%,rgba(11,26,46,.25) 100%)}
 @media (max-width:860px){.hero-bg::after,[dir="rtl"] .hero-bg::after{background:linear-gradient(180deg,rgba(11,26,46,.3),#0B1A2E 55%)}}
@@ -1403,7 +1403,7 @@ if(!reduce)document.querySelectorAll('[data-count]').forEach(el=>{const n=+el.da
 (function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,MOB=matchMedia('(max-width:760px)').matches,
     FINE=matchMedia('(hover:hover) and (pointer:fine)').matches&&!MOB;
-var DPR=Math.min(1.5,window.devicePixelRatio||1),FPS=MOB?30:45,S=MOB?32:38,H3=Math.sqrt(3)/2;
+var DPR=Math.min(2,window.devicePixelRatio||1),FPS=60,S=MOB?32:38,H3=Math.sqrt(3)/2;
 var hosts=[].slice.call(document.querySelectorAll('.arch-pat'));if(!hosts.length)return;
 var VW=document.documentElement.clientWidth,VH=window.innerHeight,MX=-9999,MY=-9999;
 var LX=-0.62,LY=-0.78;                                   // light from upper-left
@@ -1413,8 +1413,8 @@ var items=hosts.map(function(h,i){var c=document.createElement('canvas');h.appen
     c1:light?'14,32,56':'245,232,214',g:light?'194,154,91':'226,200,147'};});
 function size(it){var w=it.h.clientWidth||VW,h=VH;if(it.w===w&&it.hh===h)return;it.w=w;it.hh=h;
   it.c.width=Math.round(w*DPR);it.c.height=Math.round(h*DPR);it.c.style.height=h+'px';}
-function place(it){var r=it.sec.getBoundingClientRect(),y=Math.min(Math.max(-r.top,0),Math.max(0,r.height-VH));
-  it.c.style.transform='translate3d(0,'+y+'px,0)';it.top=r.top+y;it.p=Math.min(Math.max((VH-r.top)/(r.height+VH),0),1);}
+function place(it){var r=it.sec.getBoundingClientRect();it.top=r.top>0?r.top:(r.bottom<VH?r.bottom-VH:0);
+  it.p=Math.min(Math.max((VH-r.top)/(r.height+VH),0),1);}
 function hash(a,b){var n=Math.sin(a*127.1+b*311.7)*43758.5453;return n-Math.floor(n);}
 function face(P,ax,ay,x1,y1,x2,y2){P.moveTo(ax,ay);P.lineTo(x1,y1);P.lineTo(x2,y2);P.closePath();}
 function lvl(x1,y1,x2,y2,cx,cy){var ex=x2-x1,ey=y2-y1,nx=ey,ny=-ex,mx=(x1+x2)/2-cx,my=(y1+y2)/2-cy;if(nx*mx+ny*my<0){nx=-nx;ny=-ny;}
@@ -1428,13 +1428,13 @@ function draw(it,t){size(it);place(it);var X=it.x,W=it.w,H=it.hh,s=it.s,M=Math.m
   var b2x=sx(0.8+0.05*Math.cos(t*0.06+s)),b2y=H*(0.24+0.06*Math.sin(t*0.05+s*1.3)),b2r=M*0.15;
   var bandA=-0.55,bandC=H*(0.8+0.05*Math.sin(t*0.045+s)),bandW=M*0.11,bn=Math.sqrt(1+bandA*bandA);
   var br=1+0.03*Math.sin(t*0.3+s),px=hasM?(mx-W/2)*-0.01:0,py=hasM?(my-H/2)*-0.01:0;
-  var ox=((t*5)%S)-S+px,oy=((t*2.6)%(2*rh))-2*rh+py-it.p*50;
+  var DX=t*5-px,DY=t*2.6-py+it.p*50,c0=Math.floor(DX/(S/2))-3,r0=Math.floor(DY/rh)-2;
   X.save();X.translate(W/2,H/2);X.scale(br,br);X.translate(-W/2,-H/2);
   var L=[new Path2D(),new Path2D(),new Path2D(),new Path2D()],G=[new Path2D(),new Path2D(),new Path2D(),new Path2D()];
-  var rows=Math.ceil(H/rh)+3,cols=Math.ceil(W/(S/2))+4,RMAG=230;
-  for(var row=-1;row<=rows;row++){for(var col=-2;col<=cols;col++){
-    var up=((row+col)&1)===0,cx=ox+col*S/2,cy=oy+row*rh+(up?rh*2/3:rh/3);
-    var hs=hash(row+1000,col+1000),d1=((cx-b1x)*(cx-b1x)+(cy-b1y)*(cy-b1y))/(b1r*b1r),d2=((cx-b2x)*(cx-b2x)+(cy-b2y)*(cy-b2y))/(b2r*b2r);
+  var rows=r0+Math.ceil(H/rh)+5,cols=c0+Math.ceil(W/(S/2))+7,RMAG=230;
+  for(var row=r0;row<=rows;row++){for(var col=c0;col<=cols;col++){
+    var up=((row+col)&1)===0,cx=col*S/2-DX,cy=row*rh-DY+(up?rh*2/3:rh/3);
+    var hs=hash(row,col),d1=((cx-b1x)*(cx-b1x)+(cy-b1y)*(cy-b1y))/(b1r*b1r),d2=((cx-b2x)*(cx-b2x)+(cy-b2y)*(cy-b2y))/(b2r*b2r);
     var db=(cy-(bandA*(it.mir?W-cx:cx)+bandC))/bn/bandW;
     var F=Math.max(Math.exp(-d1*1.6),0.72*Math.exp(-d2*1.8),0.6*Math.exp(-db*db*1.4));
     F+=0.08*Math.sin(cx*0.011-t*0.5+s)*Math.cos(cy*0.01+t*0.37);
@@ -1458,7 +1458,6 @@ function draw(it,t){size(it);place(it);var X=it.x,W=it.w,H=it.hh,s=it.s,M=Math.m
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){var it=items.filter(function(x){return x.h===e.target})[0];
   if(it){it.on=e.isIntersecting;if(it.on&&RM)draw(it,it.s*9);}})},{rootMargin:'60px 0px'});items.forEach(function(it){io.observe(it.h)});}
 else items.forEach(function(it){it.on=true});
-addEventListener('scroll',function(){items.forEach(function(it){if(it.on)place(it)})},{passive:true});
 if(FINE){addEventListener('pointermove',function(e){MX=e.clientX;MY=e.clientY},{passive:true});document.addEventListener('pointerleave',function(){MX=-9999;MY=-9999});}
 var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){VW=document.documentElement.clientWidth;VH=window.innerHeight;
   items.forEach(function(it){if(it.on)draw(it,performance.now()/1000)})},150)});
